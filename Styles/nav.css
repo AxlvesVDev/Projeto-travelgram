@@ -1,0 +1,32 @@
+/* primeiramente criamos esse arquivo para ficar organizado, mexer na nav, código ficar limpo. */
+
+
+/* deixando toda a nav com elementos um do lado do outro */
+nav { 
+    display: flex;
+    justify-content: space-between;  /* adiciona espaço entre os elementos, ele distribui o espaço dos elementos */
+    align-items: center;   /* alinhar os espaços que estao no eixo */
+    line-height: 0;         /* tira qualquer espaço extra que fique atrapalhando  */
+    padding-block: 20px ;        /* o block ele vai olhar de baixo para cima, eixo x e y, sendo assim aplicou em cima e em baixo  */ 
+
+  }  
+
+/* faz com que a bolinha do lado da lista saia de cena */
+nav ul { 
+    list-style: none;
+    display: flex;   /* para deixar a ul com elementos um do lado do outro também  */
+    align-items: center;
+    gap: 24px; /* espaço entre elementos */
+    padding-block: 8px; /* validamos no figma que os espacinhos sao apenas em cima e embaixo, resultando em 8  */
+}
+
+
+/* quero pegar a imagem que esta no ultimo lia, entao vamos descrever dessa forma: */
+
+/* esse last-child, significa que vou pegar o ultimo filho do li*/
+nav ul li:last-child img { 
+  width: 40px;
+  height: 40px;  
+
+}
+

@@ -12,8 +12,49 @@
  --shape-transparency: #ffffff8f;
  --text-color-primary: #313131;
  --text-color-secondary: #6C6C6C;
+ 
+ --font-family: "Poppins", sans-serif; 
+ --text-lg: bold 32px/125% var(--font-family);
+ --text: 16px/1.5 var(--font-family);
+ --text-md: 14px/170% var(--font-family);
+ --text-sm: 12px/170% var(--font-family);
 }
 
 body {
+  font: var(--text);
   color: var(--text-color-secondary);
+  background-color: var(--background-color);
+}
+
+a { 
+ text-decoration: none; /* para tirar aquele underline  */
+ color: inherit;     /* tradução: "herdar" estou colocando uma cor herdada, por padrao vai ser azul, porem ele vai herdar do pai dele, que é o BODY */
+ 
+}
+
+
+/* hover significa que quando passar o mouse em cima vai ter alguma ação  */
+a:hover { 
+ color: var(--brand-color);
+ text-decoration: underline;   /* colocando underline quando passa o mouse */
+}
+
+
+
+/* padding-inline, pois verificamos que tem um espaço em todas laterais da pagina, no figma, de 32px
+  IN-LINE SIGNIFICA QUE SÓ VAI MEXER NAS LATERAIS, LADO DIREITO E ESQUERDO */
+.container {
+  padding-inline: 32px;  
+  max-width: 1280px;  /* para parar de crescer quando damos zoom na pagina. outro detalhe, o figma vai dar a largura total, ja com a soma dos paddings laterais, resultando em 1280 */
+  /* mas então, coloquei largura maxima e agora nao esta alinhado ao meio oq faço? a magica abaixo: */
+  margin-inline: auto; /* aqui ele deixa as margens laterais automaticas também */
+} 
+
+
+
+/* aqui é para colocar a cor de fundo no vac, nesse caso precisamoos criar uma div, e class com o nome
+ de "bg-surface-color" e colocar aqui no global a variavel da cor correta 
+*/
+.bg-surface-color { 
+  background-color: var(--surface-color); 
 }
