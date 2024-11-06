@@ -1,0 +1,51 @@
+header {
+ padding-block: 32px;  /*entendemos que o header tambem tem um padding block de 20px, (padding direita para esquerda) */
+ font: var(--text-md);
+}
+
+header .container { 
+    display: flex;   /* uma coisa do lado da outra */
+    justify-content: space-between; /* para ele funcionar tivemos que colocar uma largura maxima na caixa, Info. FUNÇÃO DELE É ESPAÇAR OS ITENS */
+    align-items: center; 
+}
+
+#profile { 
+   display: flex; /* o profile tem um display tipo flex (que seria um do lado outro) */ 
+   gap: 32px; 
+   
+
+
+}
+
+
+/*como vamos colocar a largura maxima no profile? (observamos que tem uma div dentro dele)  */
+#profile > div { 
+    max-width: 384px;
+}
+
+#profile h1 {    /* o h1 esta recebendo uma cor especifica, vamos aplicar */
+    font: var(--text-lg);
+    color: var(--text-color-primary);
+    /* temos um espacinho entre o h1 e o texto de baixo como vamos resolver? dessa forma :  */
+    margin-bottom: 8px; 
+}
+
+
+
+#info {     /* a ul já é a "info" entao só coloca #info que ja puxa  */
+    list-style: none; /* remove a bolinhas da lista  */ 
+    display: flex;   /* quero display flex nele tambem, mas como se a lista ficou de lado?? magica a baixo: */ 
+    flex-direction: column; /* faz com que a lista fique em COLUNA */
+    gap: 16px; /* espaço entre eles (se apertar alt no figma, enquanto passa o mouse da p ver) */  
+    width: 280px; /* nessa caixa info, temos que colocar a largura fixa, para ajustar o justify content betwenn*/ 
+}
+
+
+/* cada info vamos ter uma li, e cada um deles vamos ter um display flex */ 
+
+#info li {
+  display: flex; 
+  align-items: center;
+  gap: 8px ;   /* gap de 8 entre o icone e a escrita , (do mapa e do "sao paulo, brazil) por exemplo  */ 
+  
+}
