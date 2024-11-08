@@ -1,0 +1,21 @@
+
+
+
+
+main {
+    display: flex;
+    flex-wrap: wrap; /*faz com que as imagens ocupem o espaço disponvel */ 
+    gap: 24px;
+    padding-block: 32px; /* lá no global.css, ja tinhamos colocado as medidas do container da pagina
+    entao no html, classificamos o main como "container" onde ele ficou alinhado. E colocamos esse padding block tambem 
+    conforme vimos no figma*/ 
+    
+}
+
+main img { 
+    width: 286px;
+    height: 286px;
+    object-fit: cover;  /*se as fotos sao fotos que nao estao no quadrado perfeito, aplicar esa propriedade para preencher */ 
+    gap: 24px;
+
+}
