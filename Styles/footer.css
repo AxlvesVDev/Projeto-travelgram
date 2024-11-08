@@ -1,0 +1,14 @@
+footer { 
+    display: flex;
+    gap: 24px;
+    padding-block: 24px;
+;
+}
+
+footer span:nth-child(1) {   /*dessa forma estamos buscando um filho do span, nesse caso o primeiro*/
+ margin-right: auto; /* empurrei o cara la pro canto direito, o texto */ 
+ 
+}
+
+
+/* colocamos uma class tambem no footer la no html "container" para ele ja limitar a pagina igual fizemos no main */ 
